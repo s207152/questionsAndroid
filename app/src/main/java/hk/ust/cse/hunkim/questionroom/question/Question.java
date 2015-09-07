@@ -23,6 +23,7 @@ public class Question implements Comparable<Question> {
     private int echo;
     private int order;
     private boolean newQuestion;
+    private boolean isnew;
 
     public String getDateString() {
         return dateString;
@@ -138,6 +139,8 @@ public class Question implements Comparable<Question> {
     public void updateNewQuestion() {
         newQuestion = this.timestamp > new Date().getTime() - 180000;
     }
+
+    public boolean getIsnew() { return isnew; }
 
     public String getKey() {
         return key;
